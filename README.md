@@ -72,8 +72,10 @@ Then, execute the passive order (opposite side of incoming order)
 
 After executing the orders, check the `order_book` asks list, if for current price, there are no pending orders now, then delete this entry from `order_book`.
 
-Then update the `best_price` back to the new best asks in the `order_book`.
+Also, update the `best_price` back to the new best asks in the `order_book`.
+
 Also, add the remaining parts of current order into the `order_book`. 
+
 Then ready for next loop.
 
 
