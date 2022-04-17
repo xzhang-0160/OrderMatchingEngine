@@ -22,7 +22,7 @@ At each price level, there is a list of order, e.g. self.bids[610] = [Order1,Ord
 ## OrderMatchingEngine class:
 The OrderMatchingEngine class has one attribute: `central_order_book`, and one method:`match_order`
 
-The `central_order_book` is a dictionary: the keys are the symbols, and the values are the order_book of this symbol. The order_book of each symbol can be updated inplace in the order matching process.
+The `central_order_book` attribute is a dictionary: the keys are the symbols, and the values are the order_book of this symbol. The order_book of each symbol can be updated inplace in the order matching process.
 
 The `match_order` method is the core of this engine. Below is how it works:
 
