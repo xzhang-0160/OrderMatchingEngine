@@ -1,5 +1,5 @@
 # OrderMatchingEngine
-This is a simple order matching engine in Python. It will match the orders based on price/time priority.
+This is a simple order matching engine in Python. It will match the orders based on price/time priority. It supports both market order and limit order.
 
 
 <!-- ABOUT THE PROJECT -->
