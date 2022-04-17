@@ -32,7 +32,7 @@ get orders from csv file input, and save them in `orders` in list of list format
 ### Step2: evaluate orders
 Ack valid orders and reject orders with too large order size.
 
-In the meantime, for MKT orders, convert order price `MKT` into `+inf` (for Buy)/ `-inf` (for Sell). The purpose is to make the MKT order price comparable to limit order prices, so that we can handle orders by sorting.
+In the meantime, for MKT orders, convert order price from `MKT` into `+inf` (for Buy)/ `-inf` (for Sell). The purpose is to make the MKT order price comparable to limit order prices, so that we can handle orders by sorting.
 
 ### Step3: Match orders
 Loop through the orders in `valid_orders`, within each loop:
