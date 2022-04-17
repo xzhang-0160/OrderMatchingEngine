@@ -24,7 +24,13 @@ The OrderMatchingEngine class has one attribute: `central_order_book`, and one m
 
 The `central_order_book` attribute is a dictionary: the keys are the symbols, and the values are the order_book of this symbol. The order_book of each symbol can be updated inplace in the order matching process.
 
-The `match_order` method is the core of this engine. Below is how it works:
+The `match_order` method is the core of this engine. Need to pass in one parameter: a string variable which is the file name of the input csv file. For example:
+```
+ome = OrderMatchingEngine()
+ome.match_order("sampleA")
+```
+
+Below is how the order matching works:
 
 ### Step1: get orders
 get orders from csv file input, and save them in `orders` in list of list format.
