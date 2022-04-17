@@ -88,10 +88,10 @@ Variable Name | Data type | Description
 `valid_orders` | list of list | All the acknowledged valid orders
 `order` | `Order` object | the aggressive order that we are now handling
 `hit_order` | `Order` object | 	the passive order that is matched with aggressive order	
-`order_book` | `OrderBook` object | the orderbook correspond to the symbol of the order that we are handling. We make in-place changes on order_book after each execution.
-`best_price` | float | The best price in the current order_book (if current order is “Buy”, then best_price is the best ask in the orderbook). This variable will be updated after each execution.
-`trade_price` | float | The price to be traded (this is only useful if there is a MKT order. E.g. if current order is a Buy MKT order, and also there is no non-MKT price in the order_book, need to look into the next available Buy order price to make it as trade_price)
+`order_book` | `OrderBook` object | the orderbook correspond to the symbol of the order that we are handling. We make in-place changes on `order_book` after each execution.
+`best_price` | float | The best price in the current `order_book` (if current order is “Buy”, then `best_price` is the best ask in the orderbook). This variable will be updated after each execution.
+`trade_price` | float | The price to be traded (this is only useful if there is a MKT order. E.g. if current order is a Buy MKT order, and also there is no non-MKT price in the `order_book`, need to look into the next available Buy order price to make it as `trade_price`)
 `match_qty` | float | the FillQuantity for aggressive order. i.e. the total qty that can be executed this round. 
 `order_match_qty` | float | the FillQuantity for each passive order. i.e. the qty of each passive order that can be matched
-`output` | list of list | The output of order matching engine. Including header, several lines of ack orders and several lines of fill orders.
+`output` | list of list | The output of order matching engine.
 
