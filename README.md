@@ -64,9 +64,7 @@ First, execute the aggressive order (side of incoming order)
 2.	Move the qty from the `qty_remain` into the `qty_done` of the order
 
 Then, execute the passive order (opposite side of incoming order)
-(The quantity = `order_match_qty` = min(`match_qty`, the remaining quantity of this particular order))
-
-Similarly:
+(The quantity = `order_match_qty` = min(`match_qty`, the remaining quantity of this particular order)). Similarly:
 1.	"Execute" the trade. i.e. append the trade details to the output file.
 2.	Move the qty from the `qty_remain` into the `qty_done` of the order
 
