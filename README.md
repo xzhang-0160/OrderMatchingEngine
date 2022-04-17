@@ -51,11 +51,13 @@ Otherwise (if there is only MKT price in the asks in the order_book), then find 
 
 Now we get the `match_qty` and `trade_price`.
 
-First, execute the aggressive order (side of incoming order)(The quantity = match_qty.)
+First, execute the aggressive order (side of incoming order)
+(The quantity = `match_qty`)
 1.	Move the qty from the `qty_remain` into the `qty_done` of the order
 2.	And append the trade details to the output file.
+
 Then, execute the passive order (opposite side of incoming order)
-(The quantity = `order_match_qty` = min(`match_qty`, the remaining quantity of this order))
+(The quantity = `order_match_qty` = min(`match_qty`, the remaining quantity of this particular order))
 Similarly:
 1.	Move the qty from the `qty_remain` into the `qty_done` of the order
 2.	And append the trade details to the output file.
