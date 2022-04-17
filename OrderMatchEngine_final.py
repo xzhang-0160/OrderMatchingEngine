@@ -38,7 +38,7 @@ class OrderMatchingEngine:
         orders = []
         with open(input_file+'.csv') as csv_file:
             reader = csv.reader(csv_file)
-            next(reader) #Skip First Line
+            next(reader)
             for row in reader:
                 orders.append(Order(row[0], row[1], (row[2] if row[2] == 'MKT' else round(float(row[2]),1)), row[3], float(row[4]))) 
         
