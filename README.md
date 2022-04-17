@@ -10,8 +10,8 @@ The Order class contains following attributes:
 * `price` (e.g. "MKT" or 610)
 * `side` (e.g. "Buy")
 * `qty` (e.g. 10000)
-* `qty_done` (e.g. 0) the amount of order qty that is already traded
-* `qty_remain` (e.g. 10000) the amount of order qty that is yet to be traded
+* `qty_done` (e.g. 0, the amount of order qty that is already traded)
+* `qty_remain` (e.g. 10000, the amount of order qty that is yet to be traded)
 
 ## OrderBook class:
 The OrderBook class contains two attributes: `bids` and `asks`.
