@@ -60,14 +60,15 @@ Now we get the `match_qty` and `trade_price`.
 
 First, execute the aggressive order (side of incoming order)
 (The quantity = `match_qty`)
-1.	Move the qty from the `qty_remain` into the `qty_done` of the order
-2.	And append the trade details to the output file.
+1.	"Execute" the trade. i.e. append the trade details to the output file.
+2.	Move the qty from the `qty_remain` into the `qty_done` of the order
 
 Then, execute the passive order (opposite side of incoming order)
 (The quantity = `order_match_qty` = min(`match_qty`, the remaining quantity of this particular order))
+
 Similarly:
-1.	Move the qty from the `qty_remain` into the `qty_done` of the order
-2.	And append the trade details to the output file.
+1.	"Execute" the trade. i.e. append the trade details to the output file.
+2.	Move the qty from the `qty_remain` into the `qty_done` of the order
 
 ###### In my logic, there can be cases in which there is one aggressive order execution and multiple small passive order executions (the sum of multiple passive order qty = the one aggressive order qty). 
 
