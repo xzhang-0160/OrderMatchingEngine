@@ -44,7 +44,7 @@ If the `best_price` is smaller than our bid (`price`), then it is tradable, star
 ###### How to make the trade?
 1. Find the `match_qty`. 
 The `match_qty` is the minimum of (order quantity, the sum of the quantity of best_price yet to be trade in the orderbook)
-2. Find the `trade_price` (for MKT orders)
+2. Find the `trade_price` (for limit orders, the `trade price` is just `best price`. however, for MKT orders, may need below special treatment)
 If what we quote is MKT price:
 If there is non-MKT price in the asks in the `order_book`, then take the best non-MKT price in the asks as `trade_price`.
 Otherwise (if there is only MKT price in the asks in the order_book), then find the next available buy order’s price as `trade_price`.
