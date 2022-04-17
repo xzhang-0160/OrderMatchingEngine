@@ -16,7 +16,7 @@ The Order class contains following attributes:
 ## OrderBook class:
 The OrderBook class contains two attributes: `bids` and `asks`.
 
-Both the `bids` and `asks` are dictionaries: the keys are the price levels, and the values are a list of Order object.
+Both the `bids` and `asks` are dictionaries: the keys are the price levels, and the values are a list of `Order` object.
 At each price level, there is a list of order, e.g. self.bids[610] = [Order1,Order2,...]
 
 ## OrderMatchingEngine class:
