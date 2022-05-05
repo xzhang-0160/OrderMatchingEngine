@@ -97,7 +97,7 @@ class OrderMatchingEngine:
                             if j == num_order - 1 and math.isinf(trade_price):
                                 break
 
-                    # execute aggressive order first (side of incoming order)
+                    # execute aggresive order first (side of incoming order)
                     order.qty_done += match_qty
                     order.qty_remain -= match_qty
                     aggresive_trade_list = ["Fill",order_id,symbol,('MKT' if math.isinf(price) else price),
@@ -154,10 +154,10 @@ class OrderMatchingEngine:
                                 break
 
                     #trade_price = best_price if not math.isinf(best_price) else price
-                    # execute aggressive order first (side of incoming order)
+                    # execute aggresive order first (side of incoming order)
                     order.qty_done += match_qty
                     order.qty_remain -= match_qty
-                    aggressive_trade_list = ["Fill",order_id,symbol,('MKT'if math.isinf(price) else price),
+                    aggresive_trade_list = ["Fill",order_id,symbol,('MKT'if math.isinf(price) else price),
                                              side,qty,trade_price,match_qty] 
 
                     # execute the passive order then (opposite side of incoming order)
